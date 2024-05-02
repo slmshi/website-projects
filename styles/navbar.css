@@ -23,7 +23,6 @@
         animation-fill-mode: forwards;
         transition: all 0.3s ease-in-out;
         box-shadow: 0 0 50px 5px slategrey, inset 0 0 50px 5px slategrey;
-        color: slategray;
         > .title {
             display: flex;
             position: relative;
@@ -48,7 +47,7 @@
             animation-fill-mode: forwards;
             box-shadow: 0 0 10px 1px rgba(255, 255, 255);
             transition: all 0.3s ease-in-out;
-            background-color: black;
+            background-color: slategray;
             padding: 20px;
             margin: 10px;
         }

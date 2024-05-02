@@ -15,7 +15,6 @@ body {
 }
 
 .main-container .main-info {
-    
     z-index: 1;
     height: 100%;
     width: 100%;
@@ -43,7 +42,7 @@ body {
         height: 75%;
         width: 27%;
         border-radius: 15px;
-        background-color: chartreuse;
+        background-color: slategrey;
         animation-name: right-panel-anim;
         animation-duration: 1s;
         animation-fill-mode: forwards;
