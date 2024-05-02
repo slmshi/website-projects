@@ -1,0 +1,77 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+}
+
+.main-container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.main-container .main-info {
+    
+    z-index: 1;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    > .left-panel {
+        opacity: 0;
+        position: relative;
+        height: 90%;
+        width: 47%;
+        margin: 16px;
+        border-radius: 15px;
+        background-color: slategrey;
+        animation-name: left-panel-anim;
+        animation-delay: 0.5s;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        box-shadow: 0 0 50px 5px slategrey;
+        transition: all 0.3s ease-in-out;
+    }
+    > .right-panel {
+        opacity: 0;
+        position: relative;
+        height: 75%;
+        width: 27%;
+        border-radius: 15px;
+        background-color: chartreuse;
+        animation-name: right-panel-anim;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+        box-shadow: 0 0 50px 5px slategrey;
+        transition: all 0.3s ease-in-out;
+    }
+}
+
+.main-container .main-info .left-panel:hover {
+    scale: 1.03;
+    box-shadow: 0 0 50px 5px white;
+
+}
+
+.main-container .main-info .right-panel:hover {
+    translate: -20vw;
+    scale: 1.1;
+    box-shadow: 0 0 50px 5px white;
+}
+
+@keyframes left-panel-anim {
+    0% {left: -50px; opacity: 0; filter: blur(10px);}
+    50% {left: 20px; opacity: 0.5; filter: blur(10px);}
+    100% {left: 0px; opacity: 1; filter: blur(0px);}
+}
+
+@keyframes right-panel-anim {
+    0% {right: -50px; opacity: 0; filter: blur(10px);}
+    50% {right: 20px; opacity: 0.5; filter: blur(10px);}
+    100% {right: -20vw; opacity: 1; filter: blur(0px);}
+}
