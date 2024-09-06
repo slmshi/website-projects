@@ -90,13 +90,13 @@
 }
 
 @keyframes navbaranim-item {
-    0% {top: -50px; opacity: 0; filter: blur(5px);}
-    75% {top: 20px; opacity: 1; filter: blur(5px);}
-    100% {top: 0px; opacity: 1; filter: blur(0px);}
+    0% {top: -50px; opacity: 0; filter: blur(5px); pointer-events: none;}
+    75% {top: 20px; opacity: 1; filter: blur(5px); pointer-events: none;}
+    100% {top: 0px; opacity: 1; filter: blur(0px); pointer-events: all;}
 }
 
 @keyframes navbaranim {
-    0% {top: -50px; filter: blur(10px);}
-    50% {top: 20px; filter: blur(10px);}
-    100% {top: 0px; filter: blur(0px);}
+    0% {top: -50px; filter: blur(10px); pointer-events: none;}
+    50% {top: 20px; filter: blur(10px); pointer-events: none;}
+    100% {top: 0px; filter: blur(0px); pointer-events: all;}    
 }

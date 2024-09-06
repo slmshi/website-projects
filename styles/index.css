@@ -6,6 +6,7 @@ body {
     background-color: black;
 }
 
+
 .main-container {
     height: 100%;
     width: 100%;
@@ -34,6 +35,9 @@ body {
         animation-duration: 1s;
         animation-fill-mode: forwards;
         transition: all 0.3s ease-in-out;
+        > .left-panel-data {
+            margin-left: 16px;
+        }
     }
     > .right-panel {
         display: flex;
