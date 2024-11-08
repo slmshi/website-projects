@@ -4,6 +4,7 @@ body {
     margin: 0;
     overflow: hidden;
     background-color: black;
+    font-family: 'Courier New', Courier, monospace;
 }
 
 
@@ -23,8 +24,10 @@ body {
     justify-content: space-between;
     align-items: center;
     > .left-panel {
+        display: flex;
         opacity: 0;
         position: relative;
+        will-change: transform;
         height: 90%;
         width: 47%;
         margin: 16px;
@@ -34,9 +37,68 @@ body {
         animation-delay: 0.5s;
         animation-duration: 1s;
         animation-fill-mode: forwards;
+        box-shadow: 0 0 0 0 rgb(84, 96, 107);
         transition: all 0.3s ease-in-out;
         > .left-panel-data {
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            opacity: 0;
             margin-left: 16px;
+            margin-right: 16px;
+            animation-duration: 1s;
+            animation-name: left-panel-text;
+            animation-fill-mode: forwards;
+
+            > .bio {
+                display: flex;
+                position: relative;
+                flex-direction: column;
+                opacity: 0;
+                animation-delay: 0.6s;
+                animation-duration: 1s;
+                animation-name: left-panel-text;
+                animation-fill-mode: forwards;
+            }
+
+            > .intro {
+                display: flex;
+                position: relative;
+                flex-direction: column;
+                opacity: 0;
+                animation-delay: 0.7s;
+                animation-duration: 1s;
+                animation-name: left-panel-text;
+                animation-fill-mode: forwards;
+            }
+
+            > .para1 {
+                display: flex;
+                position: relative;
+                flex-direction: column;
+                opacity: 0;
+                animation-delay: 0.8s;
+                animation-duration: 1s;
+                animation-name: left-panel-text;
+                animation-fill-mode: forwards;
+            }
+
+            > .menu {
+                display: flex;
+                position: relative;
+                padding: 16px;
+                border-radius: 15px;
+                opacity: 0;
+                flex-direction: column;
+                will-change: transform;
+                width: fit-content;
+                animation-delay: 0.9s;
+                animation-duration: 1s;
+                animation-name: left-panel-text;
+                animation-fill-mode: forwards;
+                transition: all 0.3s ease-in-out 0s;
+                color: rgb(30, 51, 51);
+            }
         }
     }
     > .right-panel {
@@ -62,7 +124,31 @@ body {
 .main-container .main-info .left-panel:hover {
     scale: 1.04;
     box-shadow: 10px 7px 5px 5px rgb(49, 56, 62);
+    font-size: 20px;
+}
 
+.main-container .main-info .left-panel .menu:hover{
+    translate: 3vw;
+    scale: 1.2;
+    box-shadow: -10px 5px 5px 1px rgba(49, 56, 62, 0.5);
+}
+
+.main-container .main-info .left-panel .menu ul li{
+    display: flex;
+    position: relative;
+    opacity: 0;
+    flex-direction: column;
+    text-decoration-line: underline;
+    animation-duration: 1s;
+    animation-name: left-panel-text;
+    animation-fill-mode: forwards;
+    transition: all 0.1s ease-in-out;
+}
+
+.main-container .main-info .left-panel .menu ul li:hover {
+    scale: 1.1;
+    text-shadow: 3px 5px 2px rgb(84, 96, 107);
+    font-size: 22px;
 }
 
 .main-container .main-info .right-panel:hover {
@@ -143,11 +229,21 @@ body {
 }
 
 @keyframes left-panel-anim {
-    0% {left: -30px; opacity: 0; box-shadow: 0px 0px 0px 0px #455d8f; filter: blur(10px);}
-    100% {left: 50px; opacity: 1; box-shadow: 0px 0px 50px 15px #455d8f; filter: blur(0px);}
+    0% {left: -30px; opacity: 0; box-shadow: 0 0 0 0 rgb(84, 96, 107); filter: blur(10px);}
+    100% {left: 50px; opacity: 1; box-shadow: -8px 8px 4px 3px rgb(84, 96, 107); filter: blur(0px);}
 }
 
 @keyframes right-panel-anim {
     0% {right:  -30vw; opacity: 0; filter: blur(10px);}
     100% {right: 0vw; opacity: 1; filter: blur(0px);}
+}
+
+@keyframes left-panel-text {
+    0% {left:  -30vw; opacity: 0; filter: blur(10px);}
+    100% {left: 0vw; opacity: 1; filter: blur(0px);}
+}
+
+@keyframes menu-text {
+    0% {left:  -5vw; opacity: 0; letter-spacing: 16px; filter: blur(10px);}
+    100% {left: 0vw; opacity: 1; letter-spacing: 0px; filter: blur(0px);}
 }
