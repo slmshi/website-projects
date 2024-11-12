@@ -7,6 +7,17 @@ body {
     font-family: 'Courier New', Courier, monospace;
 }
 
+.centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    background: rgba(0, 0, 0, 0.349);
+    color: blueviolet;
+    pointer-events: none;
+}
+
 .gallery-container {
     position: relative;
     opacity: 0;
@@ -22,8 +33,7 @@ body {
     animation-duration: 1s;
     animation-delay: 0.5s;
     animation-fill-mode: forwards;
-
-
+    
 
     > .gallery-menu {
         display: flex;
@@ -46,6 +56,7 @@ body {
             animation-duration: 1s;
             animation-delay: 1s;
             animation-fill-mode: forwards;
+            color: blueviolet;
         }
         > .gallery-item-left {
             opacity: 0;
@@ -58,6 +69,7 @@ body {
             animation-duration: 1s;
             animation-delay: 1s;
             animation-fill-mode: forwards;
+            
         }
     }
 }
@@ -67,7 +79,7 @@ body {
 } 
 
 .gallery-menu img {
-
+    display: flex;
     align-self: center;
     width: 80%;
     border-radius: 10px;
