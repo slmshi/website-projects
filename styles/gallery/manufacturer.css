@@ -113,6 +113,24 @@ body {
                 height: 25px;
                 align-items: center;
                 background: transparent;
+                > .inactive-l {
+                    background: rgba(112, 128, 144, 0.4);
+                    margin-right: 16px;
+                    pointer-events: none;
+                }
+                > .inactive-r {
+                    background: rgba(112, 128, 144, 0.4);
+                    margin-left: 16px;
+                    pointer-events: none;
+                }
+
+
+                > .left {
+                    margin-right: 16px;
+                }
+                > .right {
+                    margin-left: 16px;
+                }
             }
         }
     }
@@ -129,15 +147,18 @@ body {
     align-items: center;
     box-shadow: 0 0 30px 5px rgba(112, 128, 144, 0.356);
     transition: all 0.2s ease;
+    color: black;
 }
 
 .controls a:hover {
     scale: 1.06;
     box-shadow: 0 0 30px 5px black;
+    color: aliceblue;
 }
 
 .gallery-item-left a {
     display: contents;
+    transition: all 0.1s ease;
 } 
 
 .gallery-item-left a:hover {
@@ -146,6 +167,7 @@ body {
 
 .gallery-item-right a {
     display: contents;
+    transition: all 0.1s ease;
 } 
 
 .gallery-item-right a:hover {
@@ -154,14 +176,16 @@ body {
 
 .gallery-item-mid1 a {
     display: contents;
+    transition: all 0.1s ease;
 } 
 
 .gallery-item-mid1 a:hover {
     color: aliceblue;
 }
 
-.gallery-item-mid2 a {
+.gallery-item-mid2 a{
     display: contents;
+    transition: all 0.1s ease;
 } 
 
 .gallery-item-mid2 a:hover {
