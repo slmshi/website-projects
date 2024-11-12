@@ -1,2 +1,2 @@
 # website-projects
-A dump of all my css and html projects
+Basically a place to host my social bio, photos and be silly :3
