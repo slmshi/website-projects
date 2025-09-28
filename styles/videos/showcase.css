@@ -1,0 +1,115 @@
+body {
+    height: 100vh;
+    width: 100vw;
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.video-showcase {
+    position: relative;
+    display: flex;
+    justify-items: center;
+    height: 100vh;
+    width: 100vw;
+    > .video-container {
+        display: flex;
+        align-content: center;
+        flex-wrap: wrap;
+        margin: auto;
+        height: 5%;
+        width: 90%;
+        background-color: black;
+        border-radius: 15px;
+        box-shadow: 0 0 50px 5px slategrey, inset 0 0 50px 5px slategrey;
+        flex-direction: row;
+        > .videos {
+            flex-direction: column;
+            justify-content: center;
+            align-content: center;
+            flex-wrap: wrap;
+            overflow: visible;
+            display: flex;
+            margin: auto;
+            justify-self: center;
+            height: 10vh;
+            width: 20vw;
+            border-radius: 15px;
+            box-shadow: 0 0 50px 5px slategrey, inset 0 0 50px 5px slategrey;
+            background-color: slategray;
+            z-index: 5;
+            > .video-dropdown-container {
+                flex-direction: column;
+                justify-content: space-between;
+                align-content: center;
+                flex-wrap: wrap;
+                overflow: visible;
+                display: flex;
+                justify-self: center;
+                height: 90vh;
+                width: 20vw;
+                z-index: -2;
+            }
+        }
+    }
+}
+.video-dropdown {
+    display: none;
+}
+
+.video-dropdown-container:hover .video-dropdown {
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 10vh;
+    width: 27vw;
+    background-color: red;
+    animation-fill-mode: forwards;
+    animation-duration: 0.4s;
+    > img {
+        display: flex;
+        height:auto;
+        width: 100%;
+        border-radius: 15px;
+    }
+}
+
+.bottom {
+    justify-content: flex-start;
+}
+
+.middle-bottom {
+    z-index: 1;
+}
+
+.top {
+    justify-content: flex-end;
+}
+
+.middle-top {
+    justify-content: flex-start;
+}
+
+@keyframes video-dropdown-top {
+    from {
+        top: 15px;
+        opacity: 0;
+    }
+    to {
+        top: 0px;
+        opacity: 1;
+    }
+}
+
+@keyframes video-dropdown-bottom {
+    from {
+        bottom: 10px;
+        opacity: 0;
+    }
+    to {
+        bottom: 0px;
+        opacity: 1;
+    }
+}

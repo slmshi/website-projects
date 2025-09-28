@@ -75,8 +75,8 @@
 }
 
 .nav-container .navbar:hover {
-    scale: 1.2;
-    width: 80vw;
+    scale: 1.1;
+    width: 87vw;
     translate: 0px 10px;
     box-shadow: 0 0 50px 5px white, inset 0 0 50px 5px white;
 }

@@ -570,7 +570,7 @@ html, body {
   z-index: 101;
 }
 
-.notes_text_left{
+.notes_text{
   display: block;
   visibility: hidden;
   position: relative;
@@ -580,7 +580,7 @@ html, body {
   animation-fill-mode: forwards;
 }
 
-.notes_text_left li{
+.notes_text li{
   visibility: hidden;
   position: relative;
   font-size: 19px;
@@ -588,16 +588,6 @@ html, body {
   animation-duration: 1.5s;
   animation-fill-mode: forwards;
 }
-
-.notes_text_right{
-  display: block;
-  visibility: hidden;
-  position: relative;
-  animation-name: nice_slide_left;
-  animation-duration: 1.5s;
-  animation-fill-mode: forwards;
-}
-
 
 /* Keyframes go below here*/
 
@@ -625,9 +615,9 @@ html, body {
 }
 
 @keyframes nice_slide_left {
-  0% {visibility: visible; filter: blur(10px); right:50vw}
+  0% {visibility: visible; filter: blur(10px); right:20vw; opacity: 0;}
   75% {right: -2vw; filter: blur(3px)}
-  100% {visibility: visible; filter: blur(0px); right: 0vw}
+  100% {visibility: visible; filter: blur(0px); right: 0vw; opacity: 1;}
 }
 
 @keyframes nice_slide_right {
